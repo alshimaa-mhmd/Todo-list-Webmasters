@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="input.css"> <!-- Optional: Add your styles here -->
+    <link rel="stylesheet" href="output.css"> <!-- Optional: Add your styles here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lavishly+Yours&family=Playpen+Sans:wght@100..800&family=Playwrite+DE+Grund&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col items-center justify-center p-0 bg-[#3c424a]">
+    <nav class="flex items-center sm:justify-between justify-between gap-2 w-[240px] sm:w-[500px] h-16">
+        <span class="text-white border-b-4 font-semibold border-[#f06292] sm:w-[30px] text-center sm:text-xl">All</span>
+        <div class="flex justify-center gap-6">
+            <span id="clearCompleted" class='text-gray-400 cursor-pointer sm:text-[17px] transition-all ease-in-out text-center hover:text-white hover:font-semibold text-[12px]'>Clear Completed</span>
+            <span id="itemsLeft" class='text-gray-400 sm:text-[17px] text-[12px]'>0 items left</span>
+        </div>
+
+    </nav>
+    <hr class="w-full border-[1px] border-[#353a41] mt-[-15px]" />
+    <header class="flex flex-row items-center justify-between sm:w-[400px] w-[240px] mt-8">
+        <div class="text-gray-400 sm:text-3xl text-[17px]"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="50" height="50" data-icon="ChevronLeftStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path></svg>
+         </div>
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="text-white sm:text-5xl sm:leading-[100px] text-3xl leading-[70px]">To-do List</h1>
+            <span class="text-gray-400 text-xl" id="today-date"></span>
+        </div>
+        <div class="text-gray-400 sm:text-3xl text-xl"> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="50" height="50" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+         </div>
+    </header>
+    
+    <div id="app" class="lg:w-[600px] sm:w-[500px] w-[280px]">
+        <div class="flex items-center justify-center">
+            <div class='flex flex-row items-center justify-center gap-0 bg-[#343a40] rounded px-4 mt-12 min-w-[280px]'>
+                <div id="addButton" class="text-gray-400 cursor-pointer">
+                    <img src="../images/icons8-fries-menu-48.png" alt="add" class="w-[30px] h-[30px]" />
+                </div>
+                <input id="todoInput" placeholder='Add a task...' class="sm:w-[420px] lg:w-[520px] w-[260px] h-[45px] px-4 bg-[#343a40] text-gray-400 outline-none" type="text"/>
+            </div>
+        </div>
+        <div id="todoList" class="w-[full] transition-all ease-in-ou"></div>
+    </div>
+    <div id="notification-box" class="h-[60svh] w-[220px] sm:w-[400px] rounded-md p-8 overflow-hidden fixed bottom-0 sm:right-0 right-6 flex flex-col items-center gap-6">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

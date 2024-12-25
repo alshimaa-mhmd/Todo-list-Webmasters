@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+}
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    opacity: 0;
+    position: absolute;
+  }
+  
+  /* Style the custom checkbox */
+  .checkbox-label {
+    min-width: 20px;
+    max-height: 20px;
+    background-color: #ccc;
+    border: 2px solid #666;
+    border-radius: 4px; /* Rounded corners */
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  /* Change background on hover */
+  .checkbox-label:hover {
+    background-color: #ddd;
+    border-color: #444;
+  }
+  
+  /* Checkmark style */
+  .checkbox-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(36deg);
+    display: none; /* Hidden by default */
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox:checked + .checkbox-label {
+    background-color: #f06292;
+    border-color: #f06292;
+  }
+  
+  .checkbox:checked + .checkbox-label::after {
+    display: block;
+  }
+
+  /* Initial state */
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.notification{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f06292;
+  width: 360px;
+  height: 80px;
+  border-radius: 4px;
+  color: white;
+  position: relative;
+  animation: up 2s ease-in-out;
+  transition: all ease-in-out;
+}
+/* Keyframes for fade-out effect */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        scale: 1;   
+       }
+    50% {
+        opacity: 0.7;
+        scale: 1.2;    }
+    100% {
+        opacity: .3;
+        scale: 0.2;
+    }
+}
+
+@keyframes up {
+    0% {
+      opacity: 1;
+      top: 70svh;
+      }
+      20%,40%, 60%, 80%{
+        opacity: 1;
+        top: 40svh;
+      }
+    100% {
+      opacity: 0;
+      top: 0;
+    }
+}
