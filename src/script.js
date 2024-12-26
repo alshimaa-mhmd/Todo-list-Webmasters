@@ -73,7 +73,7 @@ function renderTodoItems() {
                 </p>
             </div>
             <span class=" cursor-pointer relative z-50">
-                <img src="../images/bin (1).png" alt='bucket' class='w-5 h-5' />
+                <img src="../public/images/bin (1).png" alt='bucket' class='w-5 h-5' />
             </span>
         `;
 
