@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <link rel="stylesheet" href="input.css"> <!-- Optional: Add your styles here -->
-    <link rel="stylesheet" href="output.css"> <!-- Optional: Add your styles here -->
+    <link rel="stylesheet" href="./src/input.css"> <!-- Optional: Add your styles here -->
+    <link rel="stylesheet" href="./src/output.css"> <!-- Optional: Add your styles here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lavishly+Yours&family=Playpen+Sans:wght@100..800&family=Playwrite+DE+Grund&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
         <div class="flex items-center justify-center">
             <div class='flex flex-row items-center justify-center gap-0 bg-[#343a40] rounded px-4 mt-12 min-w-[280px]'>
                 <div id="addButton" class="text-gray-400 cursor-pointer">
-                    <img src="../public/images/icons8-fries-menu-48.png" alt="add" class="w-[30px] h-[30px]" />
+                    <img src="/images/icons8-fries-menu-48.png" alt="add" class="w-[30px] h-[30px]" />
                 </div>
                 <input id="todoInput" placeholder='Add a task...' class="sm:w-[420px] lg:w-[520px] w-[260px] h-[45px] px-4 bg-[#343a40] text-gray-400 outline-none" type="text"/>
             </div>
@@ -46,6 +46,6 @@
     </div>
     <div id="notification-box" class="h-[60svh] w-[220px] sm:w-[400px] rounded-md p-8 overflow-hidden fixed bottom-0 sm:right-0 right-6 flex flex-col items-center gap-6">
     </div>
-    <script src="script.js"></script>
+    <script src="./src/script.js"></script>
 </body>
 </html>
